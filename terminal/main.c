@@ -45,8 +45,11 @@ int main(void) {
                 fprintf(stderr, "Ошибка: укажите путь (пример: cd папка)\n");
             } else {
                 change_dir(argument);
-            }
+			}
         } 
+		else if(strcmp(command, "clear") == 0 {
+			clear_screen();
+		}
         else {
             fprintf(stderr, "Команда '%s' не найдена. Введите 'help' для справки.\n", command);
         }
