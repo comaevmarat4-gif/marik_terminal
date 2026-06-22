@@ -11,6 +11,7 @@ static inline void print_help(void) {
     printf("  cd <папка>     - Перейти в другую папку\n");
     printf("  help           - Показать это справочное сообщение\n");
     printf("  exit           - Выйти из терминала\n");
+    printf("  clear          - Очистить терминал\n");
     printf("-----------------------------------\n\n");
 }
 static inline bool change_dir(const char *path) {
