@@ -4,6 +4,7 @@
 #include "cat.h"
 #include "ls.h"
 #include "navigation.h"
+#include "clear.h"
 #define MAX_INPUT_SIZE 1024
 int main(void) {
     char input[MAX_INPUT_SIZE];
@@ -47,7 +48,7 @@ int main(void) {
                 change_dir(argument);
 			}
         } 
-		else if(strcmp(command, "clear") == 0 {
+		else if(strcmp(command, "clear") == 0) {
 			clear_screen();
 		}
         else {
