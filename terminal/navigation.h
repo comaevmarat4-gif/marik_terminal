@@ -33,4 +33,8 @@ static inline void print_prompt(void) {
     }
     fflush(stdout);
 }
+static inline clear_screen(void) {
+printf("/e[2J/e[H");
+fflush(stdout);
+}
 #endif 
