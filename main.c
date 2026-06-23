@@ -5,6 +5,7 @@
 #include "ls.h"
 #include "navigation.h"
 #include "clear.h"
+#include "find.h"
 #define MAX_INPUT_SIZE 1024
 int main(void) {
     char input[MAX_INPUT_SIZE];
@@ -51,6 +52,13 @@ int main(void) {
 		else if(strcmp(command, "clear") == 0) {
 			clear_screen();
 		}
+        else if(strcmp(command, "find") == 0) {
+            if(parsed < 2) {
+                fprintf(stderr, "Ошибка: укажите имя файла или маску для поиска (пример: find main.c)");
+                        } else {
+                        my_find(".", argument);
+                    }
+                }
         else {
             fprintf(stderr, "Команда '%s' не найдена. Введите 'help' для справки.\n", command);
         }
