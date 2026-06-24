@@ -6,6 +6,9 @@
 #include "navigation.h"
 #include "clear.h"
 #include "find.h"
+#include "rm.h"
+#include "touch.h"
+#include "editor.h"
 #define MAX_INPUT_SIZE 1024
 int main(void) {
     char input[MAX_INPUT_SIZE];
@@ -59,6 +62,16 @@ int main(void) {
                         my_find(".", argument);
                     }
                 }
+        else if(strcmp(command, "touch") == 0) {
+            my_touch(argument);
+        }
+        else if(strcmp(command, "rm") == 0) {
+            if(strcmp(argument, "main.c") == 0) break;
+            remuv(argument);
+        }
+        else if(strcmp(command, "edit") == 0) {
+            start_editor(argument);
+        }
         else {
             fprintf(stderr, "Команда '%s' не найдена. Введите 'help' для справки.\n", command);
         }
