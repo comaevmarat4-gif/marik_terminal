@@ -15,6 +15,7 @@ static inline void print_help(void) {
     printf("  rm <файл>      - Удалить файл\n");
     printf("  touch <файл>   - Создать файл\n");
     printf("  edit <файл>    - Отредактировать файл\n");
+    printf("  passgen        - Сгенерировать пароль\n");
     printf("-----------------------------------\n\n");
 }
 static inline bool change_dir(const char *path) {

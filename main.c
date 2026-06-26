@@ -9,6 +9,7 @@
 #include "rm.h"
 #include "touch.h"
 #include "editor.h"
+#include "pass.h"
 #define MAX_INPUT_SIZE 1024
 int main(void) {
     char input[MAX_INPUT_SIZE];
@@ -71,6 +72,9 @@ int main(void) {
         }
         else if(strcmp(command, "edit") == 0) {
             start_editor(argument);
+        }
+        else if(strcmp(command, "passgen") == 0) {
+            pass();
         }
         else {
             fprintf(stderr, "Команда '%s' не найдена. Введите 'help' для справки.\n", command);
