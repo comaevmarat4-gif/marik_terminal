@@ -1,3 +1,5 @@
+#ifndef PASS_H
+#define PASS_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -7,10 +9,10 @@ void pass() {
     int length;
     printf("password length: ");
     scanf("%d", &length);
-    char* password = malloc(length + 1);-
+    char* password = malloc(length + 1);
     if (password == NULL) {
         fprintf(stderr, "Memory allocation failed\n");
-        return 1;
+        return;
     }
     char* upper = "QWERTYUIOPASDFGHJKLZXCVBNM";
     char* lower = "qwertyuiopasdfghjklzxcvbnm";
@@ -37,3 +39,4 @@ void pass() {
     printf("%s\n", password);
     free(password);
 }
+#endif
